@@ -11,6 +11,18 @@
     justify-content: center;
     margin-top: 20px; /* 텍스트와 썸네일 사이 1줄 간격 */
   }
+  .mygallery img {
+    width: 120px;               /* 썸네일 크기 */
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .mygallery img:hover {
+    transform: scale(1.05);
+    border-color: #666;
+  }
   .thumb-box {
     display: flex;
     flex-direction: column;
