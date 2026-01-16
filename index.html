@@ -4,65 +4,39 @@
 <meta charset="UTF-8">
 <title>의병장 영상 갤러리</title>
 <style>
-  .mygallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px; /* 텍스트와 썸네일 사이 1줄 간격 */
-  }
-  .mygallery img {
-    width: 120px;               /* 썸네일 크기 */
-    height: auto;
-    cursor: pointer;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-    transition: transform 0.2s, border-color 0.2s;
-  }
-  .mygallery img:hover {
-    transform: scale(1.05);
-    border-color: #666;
-  }
-  .thumb-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 160px;
-  }
-  .thumb-box img {
-    width: 160px;       /* 썸네일 가로 크기 */
-    height: 90px;       /* 썸네일 세로 크기 */
-    object-fit: contain; /* 이미지 전체가 보이도록 */
-    background-color: #000; /* 여백 부분은 검정 배경 */
-    cursor: pointer;
-    border: 2px solid #ccc;
-    transition: 0.3s;
-  }
-  .thumb-box img:hover {
-    border-color: #0000ff;
-  }
-  .thumb-caption {
-    margin-top: 6px;
-    font-size: 14px;
-    text-align: center;
-    color: #333;
-  }
-  #player {
-    display: block;
-    margin: 20px auto 10px auto; /* 영상 위아래 여백 */
-    width: 426px;                /* 기존 640px의 2/3 크기 */
-    max-width: 100%;
-    border: 3px solid #006400;   /* 짙은 녹색 테두리 */
-    border-radius: 0px;
-  }
-  #description {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 10px; /* 텍스트와 썸네일 사이 여백 */
-    font-weight: bold;
-    color: #333;
-  }
+.mygallery {
+  display: flex;
+  justify-content: center;   /* 중앙 배치 */
+  flex-wrap: wrap;           /* 줄바꿈 허용 */
+  gap: 20px;                 /* 썸네일 간격 */
+  margin: 20px 0;
+}
+
+.thumb-box {
+  text-align: center;        /* 캡션 중앙 정렬 */
+}
+
+.thumb-box img {
+  width: 150px;              /* 썸네일 크기 */
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumb-box img:hover {
+  transform: scale(1.05);
+  border-color: #666;
+}
+
+.thumb-caption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
 </style>
+
 </head>
 <body>
 
