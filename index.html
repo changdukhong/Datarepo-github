@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>의병장 영상 갤러리</title>
 <style>
-  .gallery {
+  .mygallery {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -64,7 +64,7 @@
 <div id="description">영상 설명이 여기에 표시됩니다.</div>
 
 <!-- 썸네일 영역 -->
-<div class="gallery">
+<div class="mygallery">
   <div class="thumb-box">
     <img src="https://raw.githubusercontent.com/changdukhong/Datarepo-github/master/thumb-video/thumb1.jpg" 
          data-video="https://raw.githubusercontent.com/changdukhong/Datarepo-github/master/thumb-video/video1.mp4" 
@@ -174,18 +174,23 @@
 
 
 <script>
+  // 전역 변수 선언
+  let currentDescription = "";
+
+  // 갤러리 영역에 이벤트 위임
   document.addEventListener('DOMContentLoaded', () => {
+    const mygallery = document.querySelector('.mygallery');
     const player = document.getElementById('player');
     const source = player.querySelector('source');
     const description = document.getElementById('description');
-    let currentDescription = "";
 
-    // 썸네일 클릭 이벤트
-    document.querySelectorAll('.gallery img').forEach(img => {
-      img.addEventListener('click', () => {
-        const videoSrc = img.dataset.video;
-        const posterSrc = img.src;
-        const text = img.dataset.text;
+    // 갤러리 클릭 이벤트 (자식 img에만 반응)
+    mygallery.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target.tagName.toLowerCase() === 'img') {
+        const videoSrc = target.dataset.video;
+        const posterSrc = target.src;
+        const text = target.dataset.text;
 
         source.src = videoSrc;
         player.poster = posterSrc;
@@ -194,7 +199,7 @@
 
         currentDescription = text;
         description.textContent = text;
-      });
+      }
     });
 
     // 영상 종료 시 안내 문구
@@ -212,8 +217,6 @@
     });
   });
 </script>
-
-
 
 </body>
 </html>
