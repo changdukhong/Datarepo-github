@@ -89,7 +89,7 @@
   <div class="thumb-box">
     <img src="https://raw.githubusercontent.com/changdukhong/Datarepo-github/master/thumb-video/thumb3.jpg" 
          data-video="https://raw.githubusercontent.com/changdukhong/Datarepo-github/master/thumb-video/video3.mp4" 
-         data-text="왜군이 침공(임진왜란 및 정유재란)한 1592년부터 7년간 조선 전역을 참혹한 전란으로 몰아넣은 전쟁임" 
+         data-text="왜군이 침공(임진왜란 및 정유재란)한 전란으로 1592년부터 7년간 조선 전역을 참혹한 전쟁터로 몰아넣음" 
          alt="Video 3">
     <div class="thumb-caption">왜군 침공</div>
   </div>
@@ -131,7 +131,7 @@
   <div class="thumb-box">
     <img src="https://raw.githubusercontent.com/changdukhong/Datarepo-github/master/thumb-video/thumb9.jpg" 
          data-video="https://raw.githubusercontent.com/changdukhong/Datarepo-github/master/thumb-video/video9.mp4" 
-         data-text="1597년 정유재란 당시 함창 당교 전투에서 적의 유탄에 맞아 비장하고도 장렬한 죽음을 맞이함" 
+         data-text="정유재란(1597년 12월 5일) 당시 함창 당교 전투에서 적의 유탄에 맞아 비장하고도 장렬한 죽음을 맞이함" 
          alt="Video 9">
     <div class="thumb-caption">비유장군 순절</div>
   </div>
@@ -159,7 +159,7 @@
   <div class="thumb-box">
     <img src="https://raw.githubusercontent.com/changdukhong/Datarepo-github/master/thumb-video/thumb12.jpg" 
          data-video="https://raw.githubusercontent.com/changdukhong/Datarepo-github/master/thumb-video/video12.mp4" 
-         data-text="전란을 진압하고 충의를 지킨 감란의병들의 숭고한 뜻을 기리기 위해 대구부 금강의 금정 정자를 디지털로 복원함" 
+         data-text="전란을 진압하고 충의를 지킨 감란의병들의 숭고한 뜻을 기리기 위해 대구부 금강의 금정 정자를 디지털 공간으로 복원함" 
          alt="Video 12">
     <div class="thumb-caption">감란의병 정자</div>
   </div>
@@ -202,9 +202,9 @@
       }
     });
 
-    // 영상 종료 시 안내 문구
+    // 영상 종료 시 (설명은 그대로 유지)
     player.addEventListener('ended', () => {
-      description.textContent = "영상이 종료되었습니다.";
+      // 설명을 변경하지 않고 그대로 둠
       player.currentTime = 0;
       player.load();
     });
@@ -217,6 +217,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
